@@ -1,4 +1,3 @@
-# smart-task-manager
 
 # Smart Task Manager
 
@@ -26,3 +25,5 @@ A responsive task management web app built with HTML, CSS, and Vanilla JavaScrip
 ## What I Learned
 
 This project helped me practice DOM manipulation, event delegation, array methods, localStorage, and building a full CRUD-style application with Vanilla JavaScript.
+
+## Live Demo: https://task-manager-app-3.netlify.app/
