@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/b3c50b5888.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="sidebar.css" />
+    <title>Task-APP</title>
+  </head>
+  <body>
+    <!-- SECTION 1 -->
+    <div class="app">
+      <!-- SideBar Section -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <i class="fa-solid fa-clipboard-check"></i>
+          <div class="sidebar-text">
+            <h1>Task Manager</h1>
+            <p>Stay Organized, get things done</p>
+          </div>
+        </div>
+        <div class="sidebar-nav">
+          <ul class="nav-list">
+            <li class="nav-item active">
+              <div class="con filter-btn" data-filter="all">
+                <i class="fa-solid fa-house active"></i>All Task<span
+                  class="all-task-span"
+                  >0</span
+                >
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <div class="con filter-btn" data-filter="pending">
+                <i class="fa-regular fa-clock icon-pending"></i>Pending
+                Task<span class="span-pending">0</span>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <div class="con filter-btn" data-filter="complete">
+                <i class="fa-solid fa-check icon-complete"></i>Complete
+                Task<span class="span-complete">0</span>
+              </div>
+            </li>
+            <li class="br"></li>
+            <li class="nav-item task-clear">
+              <i class="fa-solid fa-trash-can icon-clear"></i>Clear All
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- main content -->
+      <main class="main-content">
+        <div class="main-padding">
+          <div class="main-text">
+            <h1>All Tasks</h1>
+            <p>Manage your tasks and stay productive</p>
+          </div>
+          <div class="content-layout">
+            <div class="left-content">
+              <form class="form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="title">Task Title</label>
+                    <input
+                      id="title"
+                      type="text"
+                      placeholder="Enter task title"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="date">Due Date</label>
+                    <input id="date" type="date" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="description">Description</label>
+                  <textarea
+                    id="description"
+                    placeholder="Enter task description"
+                  ></textarea>
+                </div>
+                <div class="right">
+                  <div class="radio-btn">
+                    <input
+                      type="radio"
+                      id="high-p"
+                      name="priority"
+                      value="high"
+                      checked
+                    />
+                    <label for="high-p">High</label>
+
+                    <input
+                      type="radio"
+                      id="medium-p"
+                      name="priority"
+                      value="medium"
+                    />
+                    <label for="medium-p">Medium</label>
+
+                    <input
+                      type="radio"
+                      id="low-p"
+                      name="priority"
+                      value="low"
+                    />
+                    <label for="low-p">Low</label>
+                  </div>
+                  <button class="btn-task" type="submit">
+                    <i class="fa-solid fa-plus"></i>
+                    Add Task
+                  </button>
+                </div>
+              </form>
+              <section class="task-list">
+                <div class="empty-state">
+                  <i class="fa-regular fa-clipboard"></i>
+                  <p>No tasks yet. Add your first task.</p>
+                  <span>Start by creating a new task from the form above.</span>
+                </div>
+                <div class="task-con"></div>
+                <!-- <div class="task-card">
+                  <div class="task-left">
+                    <button class="task-check">
+                      <i class="fa-solid fa-check"></i>
+                    </button>
+                    <div class="task-info">
+                      <h3>Finish JavaScript Project</h3>
+                      <p>
+                        Complete the task manager UI and start functionality.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="task-meta">
+                    <span>
+                      <i class="fa-regular fa-calendar"></i>
+                      2026-07-02
+                    </span>
+
+                    <span class="priority-high">High</span>
+                  </div>
+
+                  <div class="task-actions">
+                    <button class="edit-btn">
+                      <i class="fa-solid fa-pen"></i>
+                    </button>
+
+                    <button class="delete-btn">
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </div>
+                </div> -->
+              </section>
+            </div>
+
+            <!-- overview contnet -->
+            <aside class="right-panel">
+              <div class="overview">
+                <div class="overview-content">
+                  <h1>Overview</h1>
+                  <ul class="overview-list">
+                    <li class="overview-item">
+                      <i class="fa-solid fa-house icon-task"></i>
+                      <div>
+                        <strong class="all-task-span">0</strong>
+                        <span>All Tasks</span>
+                      </div>
+                    </li>
+                    <li class="overview-item">
+                      <i class="fa-regular fa-clock icon-pending"></i>
+                      <div>
+                        <strong class="span-pending">0</strong>
+                        <span>Pending</span>
+                      </div>
+                    </li>
+                    <li class="overview-item">
+                      <i class="fa-solid fa-check icon-complete"></i>
+                      <div>
+                        <strong class="span-complete">0</strong>
+                        <span>Complete</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- search  -->
+              <div class="search">
+                <div class="search-content">
+                  <h1>Search</h1>
+                  <input id="searchs" type="search" placeholder="Search Task" />
+                </div>
+              </div>
+              <!-- filter -->
+              <div class="filter">
+                <div class="filter-content">
+                  <h1>Filter</h1>
+                  <ul class="filter-list">
+                    <li class="filter-item filter-btn" data-filter="all">
+                      <i class="fa-solid fa-house icon-task"></i>
+                      All Task
+                    </li>
+                    <li class="filter-item filter-btn" data-filter="pending">
+                      <i class="fa-regular fa-clock icon-pending"></i>
+                      Pending
+                    </li>
+                    <li class="filter-item filter-btn" data-filter="complete">
+                      <i class="fa-solid fa-check icon-complete"></i>
+                      Complete
+                    </li>
+                    <li class="filter-item filter-btn" data-filter="high">
+                      <i class="fa-solid fa-flag icon-high"></i>High Priority
+                    </li>
+                    <li class="filter-item filter-btn" data-filter="mid">
+                      <i class="fa-solid fa-flag icon-mid"></i>Medium Priority
+                    </li>
+                    <li class="filter-item filter-btn" data-filter="low">
+                      <i class="fa-solid fa-flag icon-low"></i>Low Priority
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+        <footer class="footer">
+          <p class="footer-p">&#169; 2026 Task Manager, All Right Reserved</p>
+          <p class="footer-p1">Made by: Abdalhadi Nakkash</p>
+        </footer>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

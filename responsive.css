@@ -1,0 +1,335 @@
+/* ========================= */
+/* RESPONSIVE DESIGN */
+/* ========================= */
+
+/* below 1360px */
+@media (max-width: 85em) {
+  .app {
+    grid-template-columns: 22rem 1fr;
+  }
+
+  .main-inner {
+    padding: 3rem;
+  }
+
+  .content-layout {
+    grid-template-columns: 1fr 26rem;
+    gap: 2rem;
+  }
+
+  .form,
+  .task-list,
+  .task-card {
+    max-width: 100%;
+  }
+
+  .task-card {
+    gap: 1.4rem;
+  }
+
+  .task-header h3 {
+    font-size: 1.6rem;
+  }
+
+  .task-info p {
+    font-size: 1.3rem;
+  }
+}
+
+/* below 1200px */
+@media (max-width: 75em) {
+  .content-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .right-panel {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .overview,
+  .search,
+  .filter {
+    height: auto;
+    align-self: start;
+  }
+
+  .overview-list {
+    gap: 1rem;
+  }
+
+  .overview-item {
+    padding: 1.2rem;
+  }
+}
+
+/* below 992px */
+@media (max-width: 62em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .app {
+    grid-template-columns: 1fr;
+  }
+
+  .main-inner {
+    padding: 2.4rem;
+  }
+
+  .main-text h1 {
+    font-size: 3.2rem;
+  }
+
+  .right-panel {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .overview,
+  .search,
+  .filter {
+    height: auto;
+  }
+
+  .overview-content h1,
+  .search-content h1,
+  .filter-content h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* below 768px */
+@media (max-width: 48em) {
+  .main-inner {
+    padding: 2rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form {
+    padding: 1.8rem;
+  }
+
+  .task-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .task-main {
+    width: 100%;
+  }
+
+  .task-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .task-actions {
+    justify-content: flex-end;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 2rem;
+  }
+}
+
+/* below 600px */
+@media (max-width: 37.5em) {
+  html {
+    font-size: 50%;
+  }
+
+  .main-inner {
+    padding: 1.6rem;
+  }
+
+  .main-text h1 {
+    font-size: 2.8rem;
+  }
+
+  .main-text p {
+    font-size: 1.4rem;
+  }
+
+  .form,
+  .task-list,
+  .overview,
+  .search,
+  .filter {
+    border-radius: 1.6rem;
+  }
+
+  .btn-task {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .right {
+    justify-content: stretch;
+  }
+
+  .task-main {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .task-check {
+    width: 3.4rem;
+    height: 3.4rem;
+  }
+
+  .task-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .task-actions {
+    width: 100%;
+  }
+
+  .task-actions button {
+    flex: 1;
+  }
+
+  /* Overview mobile fix */
+  .overview {
+    padding: 1.6rem;
+  }
+
+  .overview-content h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .overview-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .overview-item {
+    width: 100%;
+    padding: 1.2rem 0.8rem;
+    border-radius: 1.4rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+
+    text-align: center;
+  }
+
+  .overview-item i {
+    width: 3.8rem;
+    height: 3.8rem;
+    font-size: 1.4rem;
+  }
+
+  .overview-item div {
+    align-items: center;
+  }
+
+  .overview-item strong {
+    font-size: 1.7rem;
+  }
+
+  .overview-item span {
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+
+  .search input {
+    width: 100%;
+  }
+}
+
+/* below 420px */
+@media (max-width: 26.25em) {
+  .main-inner {
+    padding: 1.2rem;
+  }
+
+  .form,
+  .task-list,
+  .overview,
+  .search,
+  .filter {
+    padding: 1.5rem;
+  }
+
+  .task-card {
+    padding: 1.6rem;
+  }
+
+  .overview-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+  }
+
+  .overview-item {
+    padding: 1rem 0.6rem;
+  }
+
+  .overview-item i {
+    width: 3.4rem;
+    height: 3.4rem;
+    font-size: 1.3rem;
+  }
+
+  .overview-item strong {
+    font-size: 1.6rem;
+  }
+
+  .overview-item span {
+    font-size: 1rem;
+  }
+
+  .filter-item {
+    font-size: 1.3rem;
+    padding: 1rem 1.2rem;
+  }
+}
+
+/* priority buttons responsive */
+@media (max-width: 37.5em) {
+  .right {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.2rem;
+  }
+
+  .radio-btn {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .radio-btn label {
+    flex: 1;
+    min-width: 0;
+    padding: 1rem 0.8rem;
+  }
+}
+
+@media (max-width: 26.25em) {
+  .radio-btn {
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .radio-btn label {
+    font-size: 1.2rem;
+  }
+}
